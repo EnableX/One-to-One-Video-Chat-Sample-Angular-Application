@@ -1,0 +1,67 @@
+<div class="container">
+  <section id="content">
+    <div class="loading">Loading....</div>
+    <div class="login_join_div" style="display: block; padding-bottom: 25px;">
+      <form id="login_form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h1>
+          <img src="../assets/img/logo.png" style="max-width: 140px;" />
+        </h1>
+        <div class="form-group">
+          <input type="text" placeholder="Enter Name" id="nameText" formControlName="nameText" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nameText.errors }" />
+          <div *ngIf="submitted && f.nameText.errors" class="invalid-feedback">
+            <div *ngIf="f.nameText.errors.required">Name is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="Enter Room ID" id="roomName" [(ngModel)]="loginFormData.roomName" formControlName="roomName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.roomName.errors }" />
+          <div *ngIf="submitted && f.roomName.errors" class="invalid-feedback">
+            <div *ngIf="f.roomName.errors.required">Room Name is required</div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12" style="
+            margin-top: 10px;
+            text-align: left;
+            margin-left: 9px;
+            font-size: 13px;
+          ">
+          <input type="checkbox" style="height: 15px; width: 15px;" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+          <label>I agree to
+            <a target="_blank" href="https://www.enablex.io/legals/tou/">Terms of Use</a>
+            and
+            <a target="_blank" href="https://www.enablex.io/legals/privacy-policy/">Privacy Policy</a>
+          </label>
+          <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">
+            Accept Ts & Cs is required
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-md-12">
+            <input type="submit" value="Join" class="btn btn-secondary btn-md btn-block" id="joinRoom" />
+          </div>
+        </div>
+        <div class="row">
+          <div id="create_room_div" class="col-md-12" style="margin-top: 10px;">
+            <span style="font-size: 12px; color: #777; margin-top: 32px;">Don't have a Room ID?
+              <a href="javascript:void(0)" id="create_room" (click)="onClickCreateRoom()">Create here</a></span>
+          </div>
+        </div>
+        <span id="message" style="color: red;" *ngIf="showRoomIDMessage">
+          We have prefilled the form with room-id. Share it with someone you
+          want to talk to
+        </span>
+      </form>
+      <!-- form -->
+    </div>
+  </section>
+  <div class="footer" style="position: relative;
+      margin-top: 30px;
+      text-align: center;
+      color: white;
+    ">
+    &copy; vCloudX Pte. Ltd. All Rights Reserved.
+  </div>
+  <!-- content -->
+</div>
+<!-- container -->
