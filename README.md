@@ -1,4 +1,4 @@
-# AngularExample
+# Angular Application: Step-by-Step Guide to Setting Up and Running a Development Server
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
