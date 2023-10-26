@@ -1,6 +1,7 @@
-# Angular Application: Step-by-Step Guide to Setting Up and Running a Development Server
+# Building and Running an Angular Application with Node Server Configuration
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+This is a demonstration of how seamless video chat functionalities can be integrated into an Angular project. Created with Angular CLI version 9.1.7, this application seamlessly interfaces with a separate node sample app server, giving developers a holistic view of setting up real-time video communication.  
+Link to linked with CLI version 9.1.7 is this -https://github.com/angular/angular-cli
 
 ## Development server
 
